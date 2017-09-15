@@ -185,7 +185,7 @@ func fillDeps(deps []Dependency) ([]Dependency, error) {
 		ps, err := LoadPackages(deps[i].ImportPath)
 		if err != nil {
 			if _, ok := err.(errPackageNotFound); ok {
-				deps[i].missing = true
+				//deps[i].missing = true
 				continue
 			}
 			return nil, err
